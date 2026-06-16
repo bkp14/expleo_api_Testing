@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Put success",
+      "price": 90.98
+    },
+    {
+      "id": "2",
+      "name": "Laptop_patch",
+      "price": 55000
+    },
+    {
+      "name": "Product 4",
+      "price": 15.87,
+      "id": "CMfqiYW-THY"
+    },
+    {
+      "name": "Product 4",
+      "price": 15.87,
+      "id": "tZZZdK99KjU"
+    },
+    {
+      "name": "Product 4",
+      "price": 15.87,
+      "id": "cehYj3hC020"
+    },
+    {
+      "id": "5Lu6m-Gs4wE",
+      "price": 15.87
+    },
+    {
+      "id": "pgob-jAMf80",
+      "name": "product 5",
+      "price": 15.87,
+      "discount": 90
+    },
+    {
+      "id": "Ccuuwn_Be8A",
+      "name": "product 5",
+      "price": 15.87,
+      "discount": 90
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

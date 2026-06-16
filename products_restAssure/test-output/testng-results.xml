@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-16T17:13:18 IST" name="Default suite" finished-at="2026-06-16T17:13:20 IST" duration-ms="1842">
+    <groups>
+    </groups>
+    <test started-at="2026-06-16T17:13:18 IST" name="Default test" finished-at="2026-06-16T17:13:20 IST" duration-ms="1842">
+      <class name="com.tests.patch_update">
+        <test-method signature="patch_method()[pri:0, instance:com.tests.patch_update@72967906]" started-at="2026-06-16T17:13:18 IST" name="patch_method" finished-at="2026-06-16T17:13:20 IST" duration-ms="1786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patch_method -->
+      </class> <!-- com.tests.patch_update -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
