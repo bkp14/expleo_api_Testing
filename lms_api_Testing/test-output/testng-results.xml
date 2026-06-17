@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-17T12:01:19 IST" name="Default suite" finished-at="2026-06-17T12:01:27 IST" duration-ms="8304">
+    <groups>
+    </groups>
+    <test started-at="2026-06-17T12:01:19 IST" name="Default test" finished-at="2026-06-17T12:01:27 IST" duration-ms="8304">
+      <class name="com.tests.getAllCourse">
+        <test-method is-config="true" signature="setupAuth()[pri:0, instance:com.tests.getAllCourse@6aeb35e6]" started-at="2026-06-17T12:01:19 IST" name="setupAuth" finished-at="2026-06-17T12:01:25 IST" duration-ms="6581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupAuth -->
+        <test-method signature="get_course()[pri:0, instance:com.tests.getAllCourse@6aeb35e6]" started-at="2026-06-17T12:01:26 IST" name="get_course" finished-at="2026-06-17T12:01:27 IST" duration-ms="1680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- get_course -->
+      </class> <!-- com.tests.getAllCourse -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
