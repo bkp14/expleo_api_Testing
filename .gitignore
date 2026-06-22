@@ -1,11 +1,5 @@
+# Ignore eclipse/local maven test outputs inside the sub-project
+lms_api_Testing/target/
+lms_api_Testing/test-output/
+lms_api_Testing/allure-results/
 .metadata/
-*.log
-bin/
-target/
-.classpath
-.project
-.settings/
-/target/
-/test-output/
-/allure-results/
-.allure/
