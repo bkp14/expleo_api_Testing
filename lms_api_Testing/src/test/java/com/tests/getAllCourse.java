@@ -1,21 +1,13 @@
 package com.tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class getAllCourse extends BaseUrl {
-	@BeforeClass
-	public void setupAuth() {
-		Authentication auth = new Authentication();
-		auth.authenticate_post();
-
-		Assert.assertNotNull(Authentication.token, "Failed to initialize token. Authentication step failed!");
-	}
-
+public class getAllCourse extends Authentication {
+	
 	@Test
 	public void get_course() {
 
@@ -28,5 +20,21 @@ public class getAllCourse extends BaseUrl {
 		int status = res.getStatusCode();
 		res.prettyPrint();
 		Assert.assertEquals(status, 200);
+	    Assert.assertNotNull(res.jsonPath().getString("data[0]._id"));
+
+	    Assert.assertNotNull(res.jsonPath().getString("data[0].institution"));
+	}
+	@Test
+	public void get_course_without_token() {
+
+	    String url = get_baseurl();
+
+	    Response res = RestAssured.given()
+	            .when()
+	            .get(url + "courses-structure/getAll");
+     res.then().statusCode(401);
+	    Assert.assertEquals(res.getStatusCode(), 401);
+
+	    res.prettyPrint();
 	}
 }

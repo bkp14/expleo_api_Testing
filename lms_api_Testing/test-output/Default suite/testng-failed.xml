@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tests.getAllRole">
+      <class name="com.tests.getAllNotes">
         <methods>
-          <include name="get_role"/>
+          <include name="invalid_pageNumber"/>
+          <include name="invalid_limitValue"/>
+          <include name="authenticate_post"/>
         </methods>
-      </class> <!-- com.tests.getAllRole -->
+      </class> <!-- com.tests.getAllNotes -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

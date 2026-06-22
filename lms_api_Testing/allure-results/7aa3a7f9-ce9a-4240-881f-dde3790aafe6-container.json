@@ -1,0 +1,1 @@
+{"uuid":"7aa3a7f9-ce9a-4240-881f-dde3790aafe6","name":"com.tests.updateNote.setup","children":["0f782461-c286-44d3-99b0-37b4664c00bb"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1782146534852,"stop":1782146538442}],"afters":[],"start":1782146534852,"stop":1782146538442}

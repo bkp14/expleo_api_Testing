@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-17T12:01:19 IST" name="Default suite" finished-at="2026-06-17T12:01:27 IST" duration-ms="8304">
+  <suite started-at="2026-06-22T23:20:21 IST" name="Default suite" finished-at="2026-06-22T23:20:39 IST" duration-ms="17529">
     <groups>
     </groups>
-    <test started-at="2026-06-17T12:01:19 IST" name="Default test" finished-at="2026-06-17T12:01:27 IST" duration-ms="8304">
-      <class name="com.tests.getAllCourse">
-        <test-method is-config="true" signature="setupAuth()[pri:0, instance:com.tests.getAllCourse@6aeb35e6]" started-at="2026-06-17T12:01:19 IST" name="setupAuth" finished-at="2026-06-17T12:01:25 IST" duration-ms="6581" status="PASS">
+    <test started-at="2026-06-22T23:20:21 IST" name="Default test" finished-at="2026-06-22T23:20:39 IST" duration-ms="17529">
+      <class name="com.tests.TogglePin">
+        <test-method is-config="true" signature="authenticate_post()[pri:0, instance:com.tests.TogglePin@6cc4cdb9]" started-at="2026-06-22T23:20:22 IST" name="authenticate_post" finished-at="2026-06-22T23:20:29 IST" duration-ms="7689" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupAuth -->
-        <test-method signature="get_course()[pri:0, instance:com.tests.getAllCourse@6aeb35e6]" started-at="2026-06-17T12:01:26 IST" name="get_course" finished-at="2026-06-17T12:01:27 IST" duration-ms="1680" status="PASS">
+        </test-method> <!-- authenticate_post -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.tests.TogglePin@6cc4cdb9]" started-at="2026-06-22T23:20:29 IST" name="setup" finished-at="2026-06-22T23:20:32 IST" duration-ms="2631" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- get_course -->
-      </class> <!-- com.tests.getAllCourse -->
+        </test-method> <!-- setup -->
+        <test-method signature="togglePin_invalidNoteId()[pri:0, instance:com.tests.TogglePin@6cc4cdb9]" started-at="2026-06-22T23:20:32 IST" name="togglePin_invalidNoteId" finished-at="2026-06-22T23:20:35 IST" duration-ms="3491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- togglePin_invalidNoteId -->
+        <test-method signature="togglePin_validNoteId()[pri:0, instance:com.tests.TogglePin@6cc4cdb9]" started-at="2026-06-22T23:20:35 IST" name="togglePin_validNoteId" finished-at="2026-06-22T23:20:39 IST" duration-ms="3569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- togglePin_validNoteId -->
+      </class> <!-- com.tests.TogglePin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,6 +1,8 @@
 package com.tests;
+import static org.hamcrest.Matchers.equalTo;
 
-import static org.hamcrest.Matchers.containsString;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -14,9 +16,25 @@ public class getallinstitutions extends BaseUrl {
 
 		String url = get_baseurl();
 		Response res = RestAssured.given().when().get(url + "getAll/institution");
-		res.then().statusCode(200);
-		int status = res.getStatusCode();
+		res.then().statusCode(200).body("getAllInstitution[0].inst_id", equalTo("INS001"))
+        .body("getAllInstitution[0].inst_name", equalTo("SmartCliff"));
 		res.prettyPrint();
-		Assert.assertEquals(status, 200);
+		
 	}
+	
+	@Test
+	public void institute_get_invalid_endpoint() {
+
+	    String url = get_baseurl();
+
+	    Response res = RestAssured.given()
+	            .when()
+	            .get(url + "getAll/institutionss");
+
+	    res.then().statusCode(404);
+
+	    System.out.println("Status Code: " + res.getStatusCode());
+	    res.prettyPrint();
+	}
+	
 }

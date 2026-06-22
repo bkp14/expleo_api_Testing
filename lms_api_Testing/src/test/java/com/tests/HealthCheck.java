@@ -18,4 +18,19 @@ public class HealthCheck extends BaseUrl {
 	  
 	  
   }
+  @Test
+  public void Get_method_invalid() {
+      String url = get_baseurl();
+
+      Response res = RestAssured.given()
+              .when()
+              .get(url + "invalidEndpoint");
+
+      res.then().statusCode(404);
+
+      System.out.println("Status Code: " + res.getStatusCode());
+      res.prettyPrint();
+
+      Assert.assertEquals(res.getStatusCode(), 404);
+  }
 }

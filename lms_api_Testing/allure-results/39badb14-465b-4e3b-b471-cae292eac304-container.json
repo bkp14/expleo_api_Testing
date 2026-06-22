@@ -1,0 +1,1 @@
+{"uuid":"39badb14-465b-4e3b-b471-cae292eac304","name":"com.tests.getNoteId.setup","children":["69bc01e6-d54f-42f1-a43d-e216f2da9026"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1782144383952,"stop":1782144386366}],"afters":[],"start":1782144383952,"stop":1782144386366}

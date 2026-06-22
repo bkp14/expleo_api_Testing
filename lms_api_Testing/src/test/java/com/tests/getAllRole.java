@@ -1,20 +1,13 @@
 package com.tests;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class getAllRole extends BaseUrl {
-	@BeforeClass
-	public void setupAuth() {
-		Authentication auth = new Authentication();
-		auth.authenticate_post();
+public class getAllRole extends Authentication {
 
-		Assert.assertNotNull(Authentication.token, "Failed to initialize token. Authentication step failed!");
-	}
 
 	@Test
 	public void get_role() {
@@ -23,8 +16,45 @@ public class getAllRole extends BaseUrl {
 		Response res = RestAssured.given().header("Authorization", "Bearer " + Authentication.token).when()
 				.get(url + "roles/getAll");
 		res.then().statusCode(200);
-		int status = res.getStatusCode();
 		res.prettyPrint();
-		Assert.assertEquals(status, 200);
+	    Assert.assertEquals(res.getStatusCode(), 200);
+
+	    Assert.assertEquals(
+	            res.jsonPath().getString("message[0].key"),"success");
+
+	    Assert.assertEquals(
+	            res.jsonPath().getString("message[0].value"),"Role Retrieved successfully");
+
+	    Assert.assertEquals(
+	            res.jsonPath().getString("roles[0].originalRole"), "Admin");
+	}
+	
+	@Test
+	public void get_role_invalid_token() {
+
+	    String url = get_baseurl();
+
+	    Response res = RestAssured.given()
+	            .header("Authorization", "Bearer invalidtoken123")
+	            .when()
+	            .get(url + "roles/getAll");
+
+	    res.prettyPrint();
+
+	    Assert.assertEquals(res.getStatusCode(), 401);
+	}
+	@Test
+	public void get_role_invalid_endpoint() {
+
+	    String url = get_baseurl();
+
+	    Response res = RestAssured.given()
+	            .header("Authorization", "Bearer " + token)
+	            .when()
+	            .get(url + "roles/getAlll");
+
+	    res.prettyPrint();
+
+	    Assert.assertEquals(res.getStatusCode(), 404);
 	}
 }
